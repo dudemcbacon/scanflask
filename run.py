@@ -1,2 +1,2 @@
-from nmap-flask import manager
+from scanflask import manager
 manager.run()

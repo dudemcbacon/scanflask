@@ -1,6 +1,6 @@
-from nmap-flask import app
+from scanflask import app
 
-@add.route('/')
-@add.route('/index')
+@app.route('/')
+@app.route('/index')
 def index():
-  return str('Hello World')
+  return 'Hellow World!'
