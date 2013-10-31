@@ -13,6 +13,7 @@ def scan():
 
 @app.route('/results')
 def results():
-  available = []
-  available.append({'ip': '192.168.1.1', 'ports': [{'80': 'info'}, {'8080': 'more info'}], 'os': 'linux', 'time': '30/Oct/2013 15:08:06', 'hostname': 'bburn1m2'})
-  available.append({'ip': '192.168.1.1', 'ports': [{'80': 'info'}, {'8080': 'more info'}], 'os': 'linux', 'time': '30/Oct/2013 15:08:06', 'hostname': 'bburn1m2'})
+  scans = []
+  scans.append({'ip': '192.168.1.1', 'ports': {80: 'info', 8080: 'more info'}, 'os': 'linux', 'time': '30/Oct/2013 15:08:06', 'hostname': 'bburn1m2'})
+  scans.append({'ip': '192.168.1.1', 'ports': {80: 'info', 8080: 'more info'}, 'os': 'linux', 'time': '30/Oct/2013 15:08:06', 'hostname': 'bburn1m2'})
+  return render_template('results.html', scans = scans)
